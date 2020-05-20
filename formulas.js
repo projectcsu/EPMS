@@ -80,7 +80,7 @@ function checkName(obj,obj2){
 
   var value = document.getElementById(obj).value;
   if( value != ""){
-  var rgex = /^[a-z][a-z\s]*$/
+  var rgex = /^[a-zA-Z\s]*$/;
   if(rgex.test(value)){
   }
   else{
