@@ -1,0 +1,108 @@
+.search input[type=text] {
+    float: right;
+    padding: 6px;
+    border: none;
+    margin-top: 8px;
+    margin-right: -870px;
+    font-size: 17px;
+  }
+  
+  
+  @media screen and (max-width: 600px) {
+    .search a, .search input[type=text] {
+      float: left;
+      display: block;
+      text-align: left;
+      width: 100%;
+      margin: 0;
+      padding: 14px;
+      margin-right: 0px;
+    }
+    .search input[type=text] {
+      border: 1px solid #ccc;
+    }
+}
+.backbutton{
+  color:red;
+}
+
+
+body{
+  height:100%;
+  width:100%;
+  padding:0;
+  margin:0;
+
+
+
+}
+
+.edit-td .edit-area {
+  border: none;
+  margin: 0;
+  padding: 0;
+  display: block;
+
+  /* remove resizing handle in Firefox */
+  resize: none;
+
+  /* remove outline on focus in Chrome */
+  outline: none;
+
+  /* remove scrollbar in IE */
+  overflow: auto;
+}
+
+.edit-controls {
+  position: absolute;
+}
+
+.edit-td {
+  position: relative;
+  padding: 0;
+}
+
+
+
+#exTab1 .tab-content {
+  color : white;
+  background-color: #428bca;
+  padding : 5px 15px;
+}
+
+#exTab2 h3 {
+  color : white;
+  background-color: #428bca;
+  padding : 5px 15px;
+}
+
+
+#exTab1 .nav-pills > li > a {
+  border-radius: 0;
+}
+
+
+#exTab3 .nav-pills > li > a {
+  border-radius: 4px 4px 0 0 ;
+}
+
+#exTab3 .tab-content {
+  color : white;
+  background-color: #428bca;
+  padding : 5px 15px;
+}
+
+
+
+input[type="date"]
+{
+    display:block;
+  
+ 
+     -webkit-appearance: textfield;
+    -moz-appearance: textfield;
+    min-height: 1.2em; 
+
+  
+   
+}
