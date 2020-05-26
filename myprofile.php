@@ -128,7 +128,7 @@ if(!isset($_SESSION['login_user'])){
                 </tr>
                 <tr>
                 <td ><label>User Name</label></td>
-                <td ><input type="text" name="username" value="<?php echo $row['user_name'] ?>"></td>
+                <td ><input type="text" name="username" id="username" onfocusout="checkName('username','User Name')"value="<?php echo $row['user_name'] ?>"></td>
                 </tr>
              
                 <tr>

@@ -51,16 +51,18 @@ require 'updateGET.php';
       }
     } 
   }
-  function submitForm(action){
+  function submitForm(action,event){
     
       var val=document.getElementById("empId").value;
       var val2=document.getElementById("empno").value;
       if(val.length <4){
-            alert("Employee ID must be four characters");    
+            alert("Employee ID must be four characters");
+            event.preventDefault();
       }
       else{
         if(val2.length <10){
-            alert("Mobile no must be 10 numbers")
+            alert("Mobile no must be 10 numbers");
+            event.preventDefault();
         }
         else{
             document.getElementById('empform').action = action;
@@ -199,7 +201,7 @@ require 'updateGET.php';
               </select></td>    
       </tr>
       <tr>
-          <td><input type ="submit" value="<?php echo $colemp ?> Employee" id="btnadd" class="btn btn-info" onclick="submitForm('<?php echo $fileemp ?>')"></td>
+          <td><input type ="submit" value="<?php echo $colemp ?> Employee" id="btnadd" class="btn btn-info" onclick="submitForm('<?php echo $fileemp ?>',event)"></td>
           <td><input type ="submit" <?php echo $canbtn; ?> id="clearbtn" value ="Cancel" class="btn btn-info" onclick="clear();window.history.go(-1); return false;" >
           </form></td>
       </tr>

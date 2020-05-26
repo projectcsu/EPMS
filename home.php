@@ -179,9 +179,11 @@ var chart = new CanvasJS.Chart("chartContainer", {
         <table >
           <tr >
           <td style="padding-right:500px">
-          <div id="chartContainer" style="height: 370px; width: 20%;"></div></td>
+          <div style="height: 370px; width: 20%;">
+          <div id="chartContainer" style="height: 370px; width: 20%;"></div></div></td>
           <td style="padding-right:1px">
-          <div id="chartContainer2" style="height: 370px; width: 20%;"></div>
+          <div style="height: 370px; width: 20%;">
+          <div id="chartContainer2" style="height: 370px; width: 20%;"></div></div>
           </td>
           <td width="600"align="right" style="font-size: 50px;">
    
