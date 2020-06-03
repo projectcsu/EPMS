@@ -51,6 +51,28 @@ if(!isset($_SESSION['login_user'])){
   <script type="text/javascript" src="formulas.js"> </script>
   <script type="text/javascript">
 
+function search(){
+
+var input, filter, table, tr, td, i, txtValue;
+input = document.getElementById("searchemp");
+filter = input.value.toUpperCase();
+table = document.getElementById("dataTable");
+tr = table.getElementsByTagName("tr");
+
+for (i = 0; i < tr.length; i++){
+
+  td = tr[i].getElementsByTagName("td")[1];
+  if (td){
+    txtValue = td.textContent || td.innerText;
+    if(txtValue.toUpperCase().indexOf(filter) > -1) {
+      tr[i].style.display = "";
+    } 
+    else{
+    tr[i].style.display = "none";
+    }
+  }
+} 
+}
   function submitForm(action){
           
             document.getElementById('payform').action = action;
@@ -230,6 +252,9 @@ if(!isset($_SESSION['login_user'])){
             <i class="fas fa-table"></i>
            Ongoing Payments</div>
           <div class="card-body">
+          <div align="right">
+            <label> <b> Search : </b> </label>
+            <input type="text" id="searchemp" onkeyup="search()"></div>
             <div class="table-responsive">
               <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                 <thead>
